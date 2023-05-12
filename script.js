@@ -10,8 +10,8 @@ const lookup = {
   'Y': 'L','Z': 'M', '?': '?', ',': ','
 };
 
-// function encode(input){
-	let input = "#ABC"
+function encode(input){
+	// let input = "#ABC"
 	let output = "";
 
 	for(let i=0; i<input.length; i++){
@@ -23,11 +23,11 @@ const lookup = {
 			output += lookup[input[i]];
 		}
 	}
-	// return output;
-	console.log(output);
-// }
+	return output;
+	// console.log(output);
+}
 
-// console.log(encode("#ABC"));
+console.log(encode("#ABC"));
 
 
 
