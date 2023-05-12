@@ -10,15 +10,36 @@ const lookup = {
   'Y': 'L','Z': 'M', '?': '?', ',': ','
 };
 
-function rot13(encodedStr){
-   let decodedArr = []; // Your Result goes here
-  // Only change code below this line
+// function encode(input){
+	let input = "#ABC"
+	let output = "";
 
-  return ;//return decodedArr
-}
+	for(let i=0; i<input.length; i++){
 
-// You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
+		if( lookup[input[i]] === undefined){
+				output += input[i];
+		}
+		else{
+			output += lookup[input[i]];
+		}
+	}
+	// return output;
+	console.log(output);
+// }
 
-// console.log(rot13("SERR YBIR? NPPVBWBO"));
+// console.log(encode("#ABC"));
 
-module.exports = rot13;
+
+
+// function rot13(encodedStr){
+//    let decodedArr = []; // Your Result goes here
+//   // Only change code below this line
+
+//   return ;//return decodedArr
+// }
+
+// // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
+
+// // console.log(rot13("SERR YBIR? NPPVBWBO"));
+
+// module.exports = rot13;
