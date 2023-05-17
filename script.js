@@ -1,33 +1,54 @@
 // Your Script here.
 
+// const lookup = {
+//   'A': 'N','B': 'O','C': 'P','D': 'Q',
+//   'E': 'R','F': 'S','G': 'T','H': 'U',
+//   'I': 'V','J': 'W','K': 'X','L': 'Y',
+//   'M': 'Z','N': 'A','O': 'B','P': 'C',
+//   'Q': 'D','R': 'E','S': 'F','T': 'G',
+//   'U': 'H','V': 'I','W': 'J','X': 'K',
+//   'Y': 'L','Z': 'M', '?': '?', ',': ','
+// };
+
+// function encode(input){
+// 	let output = "";
+
+// 	for(let i=0; i<input.length; i++){
+
+// 		if( lookup[input[i]] === undefined){
+// 				output += input[i];
+// 		}
+// 		else{
+// 			output += lookup[input[i]];
+// 		}
+// 	}
+// 	return output;
+// }
+
+///
 const lookup = {
-  'A': 'N','B': 'O','C': 'P','D': 'Q',
-  'E': 'R','F': 'S','G': 'T','H': 'U',
-  'I': 'V','J': 'W','K': 'X','L': 'Y',
-  'M': 'Z','N': 'A','O': 'B','P': 'C',
-  'Q': 'D','R': 'E','S': 'F','T': 'G',
-  'U': 'H','V': 'I','W': 'J','X': 'K',
-  'Y': 'L','Z': 'M', '?': '?', ',': ','
-};
+    'A': 'N','B': 'O','C': 'P','D': 'Q',
+    'E': 'R','F': 'S','G': 'T','H': 'U',
+    'I': 'V','J': 'W','K': 'X','L': 'Y',
+    'M': 'Z','N': 'A','O': 'B','P': 'C',
+    'Q': 'D','R': 'E','S': 'F','T': 'G',
+    'U': 'H','V': 'I','W': 'J','X': 'K',
+    'Y': 'L','Z': 'M', '?': '?', ',': ','
+  };
 
-function encode(input){
-	// let input = "#ABC"
-	let output = "";
+  function rot13(encodedStr){
+    let outputString = "";
+  for(let i = 0;i<encodedStr.length;i++){
+    if(lookup[encodedStr[i]] === undefined){
+        outputString += encodedStr[i];
+    }else{
+        outputString += lookup[encodedStr[i]]
+    }
+  }
+  return outputString;
+  }
+module.exports = rot13;
 
-	for(let i=0; i<input.length; i++){
-
-		if( lookup[input[i]] === undefined){
-				output += input[i];
-		}
-		else{
-			output += lookup[input[i]];
-		}
-	}
-	return output;
-	// console.log(output);
-}
-
-// console.log(encode("#ABC"));
 
 
 
