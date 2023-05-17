@@ -27,7 +27,7 @@ function encode(input){
 	// console.log(output);
 }
 
-console.log(encode("#ABC"));
+// console.log(encode("#ABC"));
 
 
 
