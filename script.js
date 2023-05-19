@@ -10,20 +10,20 @@ const lookup = {
   'Y': 'L','Z': 'M', '?': '?', ',': ','
 };
 
-function rot13(input){
-	let output = "";
+// function rot13(input){
+// 	let output = "";
 
-	for(let i=0; i<input.length; i++){
+// 	for(let i=0; i<input.length; i++){
 
-		if( lookup[input[i]] === undefined){
-				output += input[i];
-		}
-		else{
-			output += lookup[input[i]];
-		}
-	}
-	return output;
-}
+// 		if( lookup[input[i]] === undefined){
+// 				output += input[i];
+// 		}
+// 		else{
+// 			output += lookup[input[i]];
+// 		}
+// 	}
+// 	return output;
+// }
 
 ///
 // const lookup = {
@@ -36,18 +36,18 @@ function rot13(input){
 //     'Y': 'L','Z': 'M', '?': '?', ',': ','
 //   };
 
-//   function rot13(encodedStr){
-//     let outputString = "";
-//   for(let i = 0;i<encodedStr.length;i++){
-//     if(lookup[encodedStr[i]] === undefined){
-//         outputString += encodedStr[i];
-//     }else{
-//         outputString += lookup[encodedStr[i]]
-//     }
-//   }
-//   return outputString;
-//   }
-// module.exports = rot13;
+  function rot13(encodedStr){
+    let outputString = "";
+  for(let i = 0;i<encodedStr.length;i++){
+    if(lookup[encodedStr[i]] === undefined){
+        outputString += encodedStr[i];
+    }else{
+        outputString += lookup[encodedStr[i]]
+    }
+  }
+  return outputString;
+  }
+module.exports = rot13;
 
 
 
